@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="es" class"no-js">
+<!-- esta líne define el idioma de la página y class: realiza la activación de modernizr-->
+
+<head>
+
+	<meta charset="UTF-8">
+		<!--permite que los caracteres especiales (ñ) se muestre como son -->
+	<meta content="Lindelia Polanía Sánchez" name="author"/>
+		<!--permite incluir el nombre del autor de la página -->
+	<meta content="Plantilla OVA - UNAD - DiseñoDSitiosWeb" name="description"/>
+		<!--permite incluir un pequeño detalle del contenido de la página y si buscan alguna información referente a nuestra página 
+		aparecerá como opción en los buscadores -->
+	<meta content="OVA, Palntilla, UNAD, DiseñoDSitiosWeb" name="keywords"/>
+		<!--permite incluir palabras claves que identifiquen el contenido de la página y si buscan alguna información referente a nuestra página 
+		aparecerá como opción en los buscadores -->
+	<title> OBJETO VIRTUAL DE APRENDIZAJE PARA DISEÑO DE SITIOS WEB </title>
+	<link rel="stylesheet" href="css/normalize.css">
+		<!-- Permite realizar un enlace con un archivo diferente a la página en construcción, en este caso se conecta a una página de stilo -->
+	<link rel="stylesheet" href="css/style.css">
+
+	
+	<style type="text/css">
+		#text_slider{
+			width: 600px;
+			height: 300px;
+			margin: 8em auto;
+			box-shadow: 0 0 90px #a63A00 inset;	
+			border-radius: 20px 20px 20px 20px;
+		}
+		
+		#text_slider div{
+			padding: 1em;
+			margin: 10px;
+		}
+		
+		#text_silder p{
+			font-size: 100pt;
+		}
+		
+		#text_silder img{
+			margin: 1em;
+			padding: 1em;
+		}
+	
+	</style>		
+	
+	<link href="img/iconoUNAD.ico" type="img/iconoUNAD.ico" rel="ahortcut icon"/>
+
+</head>
+
+<body>
+	
+	<div id="cabecera">
+	  <div id="logotipo"></div>
+	</div>
+	
+	<div id="logotipo">
+		<img src="img/logoUnad1.PNG" width="113.385826772px" height="113.385826772px"
+		alt="Haz clic aquí para volver a la página de inicio">
+	</div>	
+	
+		
+	<div id="contenidos">
+		<header>
+			<h1>OBJETO VIRTUAL DE APRENDIZAJE</h1> 
+			<h2>Diseño de Sitios Web</h2>
+		</header>
+		
+		<nav><ul>
+			<li><a href="#">Inicio</a></li>
+			<li><a href="#">Lecturas</a></li>
+			<li><a href="#">Multimedia</a></li>
+			<li><a href="#">Actividades</a></li>
+			<li><a href="#">Autores</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<!-- aquí inicio parte de la creación del banner-->
+	<div id="text_slider">
+		<div><p>OBJETO VIRTUAL DE APRENDIZAJE</p></div>
+		<div><p>Diseño de Sitios Web</p></div>	  
+		<img src="unadECTBI.jpg" width="500" height="300" alt="" />	
+		<img src="logoq.jpg" width="500" height="300" alt="" />
+	</div>
+
+</body>
+
+	<script src="js/modernizr.js"></script> 
+		<!--modernizr=detecta y activa funciones importantes,esto en el navegador. Aquí estoy llamando el js -->
+	<script src="js/prefixfree.min.js"></script>
+		<!-- -prefixfree: ayuda a que sea compatibles los prefijos -->
+	<script src="js/jquery-3.1.0.js"></script>
+		<!-- jquery: contiene instrucciones importante de js -->
+	
+	<script>
+		$("#text_slider div:gt(0)").hide();
+		
+		setInterval(function(){
+			$('#text_silder div:first')
+			.fadeOut(500).next().fadeIn(1000).end().appendTo('#text_slider');
+		}, (3000);
+
+	</script>
+
+	
+</html>
